@@ -55,7 +55,7 @@ const CalendarView = () => {
                 dateClick={(info) => {
                     navigate(`/calendar/day/${info.dateStr}`);
                 }}
-                dayMaxEventRows={true}
+                dayMaxEvents={2}
                 eventContent={(arg) => {
                     return (
                         <div>

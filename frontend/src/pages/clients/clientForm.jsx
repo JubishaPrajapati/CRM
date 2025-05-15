@@ -11,7 +11,7 @@ const ClientForm = () => {
         email: '',
         phone: '',
         address: '',
-        status: 'new',
+        status: '',
     });
 
     useEffect(() => {
@@ -47,42 +47,75 @@ const ClientForm = () => {
         }
     }
     return (
-        <form className='client-form' onSubmit={handleSubmit}>
-            <h3>{id ? 'Edit Client' : 'Add Client'}</h3>
-            <div className='form-group'>
-                <label>Name:</label>
-                <input name="name" value={formData.name} onChange={handleChange} required />
-            </div>
+        <div className="clientform-container">
+            <h2 className="clientform-title">{id ? 'Edit Client' : 'Add Client'}</h2>
+            <form className="clientform" onSubmit={handleSubmit}>
+                <div className="clientform-group">
+                    <label>Name:</label>
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Email:</label>
-                <input name="email" value={formData.email} onChange={handleChange} />
-            </div>
+                <div className="clientform-group">
+                    <label>Email:</label>
+                    <input
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label>Phone:</label>
-                <input name="phone" value={formData.phone} onChange={handleChange} />
-            </div>
+                <div className="clientform-group">
+                    <label>Phone:</label>
+                    <input
+                        type="text"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className="form-group">
-                <label>Address:</label>
-                <input name="address" value={formData.address} onChange={handleChange} />
-            </div>
+                <div className="clientform-group">
+                    <label>Address:</label>
+                    <input
+                        type="text"
+                        name="address"
+                        value={formData.address}
+                        onChange={handleChange}
+                    />
+                </div>
 
-            <div className='form-group'>
-                <label>Status:</label>
-                <select name='status' value={formData.status} onChange={handleChange}>
-                    <option value="new">New</option>
-                    <option value="contacted">Contacted</option>
-                    <option value="contacted">Interested</option>
-                    <option value="contacted">Closed</option>\
-                </select>
-            </div>
+                <div className="clientform-group">
+                    <label>Status:</label>
+                    <select
+                        name="status"
+                        value={formData.status}
+                        onChange={handleChange}
+                        className={formData.status === '' ? 'placeholder' : ''}
+                    >
+                        <option value="" disabled hidden>Select status</option>
+                        <option value="new">New</option>
+                        <option value="contacted">Contacted</option>
+                        <option value="interested">Interested</option>
+                        <option value="closed">Closed</option>
+                    </select>
+                </div>
 
-            <button type='submit' className='submit-btn'>
-                {id ? 'Update' : 'Add'}
-            </button>
-        </form>
-    )
-}
+                <div className="clientsubmit-btn">
+                    <button type="submit" >
+                        {id ? 'Update Client' : 'Add Client'}
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    );
+};
+
 export default ClientForm;

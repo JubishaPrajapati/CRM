@@ -1,56 +1,71 @@
-/* src/components/ClientForm.css */
-.client-form {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin-bottom: 24px;
-    border-radius: 8px;
+.clientform-container {
     max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.client-form h3 {
-    margin-bottom: 16px;
-    font-size: 20px;
+.clientform-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
 }
 
-.form-group {
-    margin-bottom: 12px;
+.clientform {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 4px;
+.clientform-group {
+    display: flex;
+    flex-direction: column;
 }
 
-.form-group input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #aaa;
-    border-radius: 4px;
+.clientform-group label {
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #444;
 }
 
-.submit-btn {
-    padding: 10px 16px;
-    background-color: #1976d2;
+.clientform-group input,
+.clientform-group select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    padding: 8px 8px;
+}
+
+
+.clientsubmit-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.clientform-container button[type="submit"] {
+    width: 120px;
+    padding: 0.75rem;
+    background-color: #007bff;
     color: white;
+    font-weight: bold;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.submit-btn:hover {
-    background-color: #115293;
+
+.clientform-container button:hover {
+    background-color: #0056b3;
 }
 
-.notes-section {
-    margin-top: 30px;
-    padding: 20px;
-    border-top: 2px solid #ccc;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+.clientform-group select.placeholder {
+    color: grey;
 }
 
-.notes-section h3 {
-    margin-bottom: 15px;
-    font-size: 20px;
-    color: #333;
+.clientform-group select {
+    color: black;
 }

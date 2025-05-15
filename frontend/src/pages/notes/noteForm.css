@@ -1,5 +1,5 @@
 .note-form-page {
-    max-width: 600px;
+    max-width: 400px;
     margin: 2rem auto;
     padding: 2rem;
     background-color: #ffffff;
@@ -19,19 +19,19 @@
     gap: 1rem;
 }
 
-.form-group {
+.noteform-group {
     display: flex;
     flex-direction: column;
 }
 
-.form-group label {
+.noteform-group label {
     font-weight: bold;
     margin-bottom: 0.5rem;
     color: #555;
 }
 
-.form-group select,
-.form-group textarea {
+.noteform-group select,
+.noteform-group textarea {
     padding: 0.75rem;
     border-radius: 6px;
     border: 1px solid #ccc;
@@ -40,11 +40,21 @@
     min-height: 40px;
 }
 
-.form-group textarea {
+select:invalid {
+    color: grey;
+}
+
+select option {
+    color: black;
+}
+
+
+.noteform-group textarea {
     min-height: 100px;
 }
 
 .note-form-page button[type="submit"] {
+    width: 100px;
     padding: 0.75rem;
     background-color: #007bff;
     color: white;
@@ -55,6 +65,13 @@
     transition: background-color 0.3s ease;
 }
 
+
+
 .note-form-page button[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.noteform-submit {
+    display: flex;
+    justify-content: center;
 }

@@ -77,7 +77,7 @@ const NoteForm = () => {
         <div className="note-form-page">
             <h2>{id ? 'Edit Note' : 'Add New Note'}</h2>
             <form onSubmit={handleSubmit}>
-                <div className="form-group">
+                <div className="noteform-group">
                     <label htmlFor="client">Client</label>
                     <select
                         id="client"
@@ -87,7 +87,7 @@ const NoteForm = () => {
                         required
                         disabled={Boolean(clientIdFromQuery)}
                     >
-                        <option value="">Select Client</option>
+                        <option value="" disabled>Select Client</option>
                         {clients.map(client => (
                             <option key={client._id} value={client._id}>
                                 {client.name}
@@ -96,7 +96,7 @@ const NoteForm = () => {
                     </select>
                 </div>
 
-                <div className="form-group">
+                <div className="noteform-group">
                     <label htmlFor="content">Note</label>
                     <textarea
                         id="content"
@@ -107,7 +107,9 @@ const NoteForm = () => {
                     />
                 </div>
 
-                <button type="submit">{id ? 'Update' : 'Add'} Note</button>
+                <div className="noteform-submit">
+                    <button type="submit">{id ? 'Update' : 'Add'} Note</button>
+                </div>
             </form>
         </div>
     );
