@@ -1,0 +1,52 @@
+.meeting-form {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9fafb;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+textarea {
+    height: 100px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}

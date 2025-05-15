@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html,
+body {
+  display: flex;
+  flex: 1;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 20px;
+}

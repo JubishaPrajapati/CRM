@@ -1,0 +1,116 @@
+.client-detail {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.client-detail h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Client Info Card */
+.client-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #3498db;
+    margin-bottom: 30px;
+}
+
+.client-card p {
+    margin: 8px 0;
+    font-size: 16px;
+}
+
+/* Meetings Section */
+.meetings-section {
+    padding: 20px;
+    background-color: #fffaf7;
+    border: 1px solid #ffe1cc;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.meetings-section h3 {
+    color: #e67e22;
+    margin-bottom: 15px;
+}
+
+.meeting-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.meeting-item {
+    background-color: #fff;
+    border: 1px solid #ffe0bd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.meeting-item p {
+    margin: 6px 0;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    text-align: center;
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+}
+
+/* note section */
+.notes-section {
+    margin-top: 2rem;
+}
+
+.note-list {
+    list-style: none;
+    padding: 0;
+}
+
+.note-item {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.note-actions button {
+    margin-left: 0.5rem;
+    cursor: pointer;
+}
+
+.add-note-btn {
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}

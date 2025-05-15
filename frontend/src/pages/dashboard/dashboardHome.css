@@ -1,0 +1,10 @@
+.dashboard-home {
+    padding: 24px;
+}
+
+.summary-cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
