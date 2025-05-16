@@ -77,50 +77,53 @@ const ClientDetail = () => {
 
     return (
         <div className='client-detail'>
-            <h2>Client Detail</h2>
-            <div className='client-card'>
-                <p><strong>Name:</strong> {client.name}</p>
-                <p><strong>Email:</strong> {client.email}</p>
-                <p><strong>Phone:</strong> {client.phone}</p>
-                <p><strong>Address:</strong> {client.address}</p>
-                <p><strong>Status:</strong> {client.status}</p>
-                <p><strong>Created At:</strong> {new Date(client.createdAt).toLocaleString()}</p>
-            </div>
+            <h2> Overall Client Detail</h2>
+            <div className='top-section'>
+                <div className='client-card'>
+                    <h3>Client Information</h3>
+                    <p><strong>Name:</strong> {client.name}</p>
+                    <p><strong>Email:</strong> {client.email}</p>
+                    <p><strong>Phone:</strong> {client.phone}</p>
+                    <p><strong>Address:</strong> {client.address}</p>
+                    <p><strong>Status:</strong> {client.status}</p>
+                    <p><strong>Created At:</strong> {new Date(client.createdAt).toLocaleString()}</p>
+                </div>
 
 
-            {/* Meetings Section */}
-            <div className="meetings-section">
-                <h3>Meetings</h3>
-                {meetings.length === 0 ? (
-                    <p>No meetings yet.</p>
-                ) : (
-                    <ul className='meeting-list'>
-                        {meetings.map((meeting) => (
-                            <li key={meeting._id} className='meeting-item'>
-                                <p><strong>Agenda:</strong> {meeting.agenda}</p>
-                                <p><strong>Date:</strong> {new Date(meeting.date).toLocaleDateString()}</p>
-                                <p><strong>Time:</strong> {meeting.time}</p>
-                                <p><strong>Location:</strong> {meeting.location}</p>
-                                <div className="meeting-actions">
-                                    <button
-                                        onClick={() => navigate(`/meetings/edit/${meeting._id}?from=clientDetail`)}
-                                        className='edit-btn'
-                                    >
-                                        <FaEdit />
-                                    </button>
-                                </div>
-                            </li>
-                        ))}
-                    </ul>
+                {/* Meetings Section */}
+                <div className="meetings-section">
+                    <h3>Meetings</h3>
+                    {meetings.length === 0 ? (
+                        <p>No meetings yet.</p>
+                    ) : (
+                        <ul className='meeting-list'>
+                            {meetings.map((meeting) => (
+                                <li key={meeting._id} className='meeting-item'>
+                                    <p><strong>Agenda:</strong> {meeting.agenda}</p>
+                                    <p><strong>Date:</strong> {new Date(meeting.date).toLocaleDateString()}</p>
+                                    <p><strong>Time:</strong> {meeting.time}</p>
+                                    <p><strong>Location:</strong> {meeting.location}</p>
+                                    <div className="meeting-actions">
+                                        <button
+                                            onClick={() => navigate(`/meetings/edit/${meeting._id}?from=clientDetail`)}
+                                            className='clientDetail-meetingedit-btn'
+                                        >
+                                            <FaEdit />
+                                        </button>
+                                    </div>
+                                </li>
+                            ))}
+                        </ul>
 
-                )}
+                    )}
+                </div>
             </div>
 
             {/* Notes Section */}
             <div className="notes-section">
                 <h3>Notes</h3>
                 <button
-                    className='add-note-btn'
+                    className='clientDetail-noteadd-btn'
                     onClick={() => navigate(`/notes/new?clientId=${id}&from=clientDetail`)}
                 >
                     Add New Note
@@ -129,7 +132,7 @@ const ClientDetail = () => {
                 {notes.length === 0 ? (
                     <p>No notes yet.</p>
                 ) : (
-                    <ul className='note-list'>
+                    <ul className='clientDetail-note-list'>
                         {notes.map(note => (
                             <li key={note._id} className='note-item'>
                                 <div className="note-content">
@@ -139,13 +142,13 @@ const ClientDetail = () => {
                                         <div className="note-actions">
                                             <button
                                                 onClick={() => navigate(`/notes/edit/${note._id}?from=clientDetail`)}
-                                                className='edit-btn'
+                                                className='clientDetail-noteedit-btn'
                                             >
                                                 <FaEdit />
                                             </button>
                                             <button
                                                 onClick={() => handleDeleteNote(note._id)}
-                                                className='delete-btn'
+                                                className='clientDetail-notedelete-btn'
                                             >
                                                 <FaTrash />
                                             </button>
@@ -157,8 +160,7 @@ const ClientDetail = () => {
                     </ul>
                 )}
             </div>
-
-            <Link to='/clients' className='back-btn'>Back to List</Link>
+            <Link to='/clients' className='back-btn'>Back to client list</Link>
         </div>
     )
 }

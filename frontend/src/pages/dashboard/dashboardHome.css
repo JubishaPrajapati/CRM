@@ -2,9 +2,13 @@
     padding: 24px;
 }
 
+.dashboard-home h1 {
+    margin: 30px;
+}
+
 .summary-cards-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-    margin-top: 20px;
+    margin: 30px;
 }

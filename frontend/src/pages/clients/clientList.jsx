@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { getAllClients, deleteClient } from '../../services/clientService';
+import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import './clientList.css';
 
@@ -35,11 +36,21 @@ const ClientList = () => {
     return (
         <div className='client-container'>
             <h2 className='client-header'>Clients</h2>
-            <button className="add-btn" onClick={() => navigate('/clients/new')}>
-                Add Client
-            </button>
-            <input type='text' placeholder='Search by clinet name' value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className='search-input' />
-
+            <div className='btn-and-search'>
+                <button onClick={() => navigate('/clients/new')}>
+                    Add Client
+                </button>
+                <div className="search-container">
+                    <input
+                        type='text'
+                        placeholder='Search by client name'
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        className='search-input'
+                    />
+                    <FaSearch className="search-icon" />
+                </div>
+            </div>
             <table className='client-table'>
                 <thead>
                     <tr>
@@ -61,10 +72,10 @@ const ClientList = () => {
                             <td>{client.phone}</td>
                             <td>{client.address}</td>
                             <td>{client.status}</td>
-                            <td>
-                                <button onClick={() => navigate(`/clients/${client._id}`)} className="view-btn">View Details</button>
-                                <button onClick={() => navigate(`/clients/edit/${client._id}`)} className="edit-btn">Edit</button>
-                                <button onClick={() => handleDelete(client._id)} className="delete-btn">Delete</button>
+                            <td className='clientaction-btns'>
+                                <button onClick={() => navigate(`/clients/${client._id}`)} className="clientview-btn">View Details</button>
+                                <button onClick={() => navigate(`/clients/edit/${client._id}`)} className="clientedit-btn">Edit</button>
+                                <button onClick={() => handleDelete(client._id)} className="clientdelete-btn">Delete</button>
                             </td>
                         </tr>
                     )))}

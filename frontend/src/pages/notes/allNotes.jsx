@@ -35,7 +35,7 @@ const AllNotes = () => {
     return (
         <div className="all-notes">
             <h2>All Notes</h2>
-            <button className='add-note-btn' onClick={() => navigate('/notes/new')}> Add New Note</button>
+            <button className='noteadd-btn' onClick={() => navigate('/notes/new')}> Add New Note</button>
             {notes.length == 0 ? (
                 <p>No Notes found.</p>
             ) : (
@@ -52,13 +52,13 @@ const AllNotes = () => {
                                     <div className="note-actions">
                                         <button
                                             onClick={() => navigate(`/notes/edit/${note._id}`)}
-                                            className='edit-btn'
+                                            className='noteedit-btn'
                                         >
                                             <FaEdit />
                                         </button>
                                         <button
                                             onClick={() => handleDelete(note._id)}
-                                            className='delete-btn'
+                                            className='notedelete-btn'
                                         >
                                             <FaTrash />
                                         </button>

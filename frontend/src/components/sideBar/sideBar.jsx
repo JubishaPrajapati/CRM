@@ -23,7 +23,7 @@ import './sideBar.css';
 const SideBar = () => {
     return (
         <div className="sidebar">
-            <Link to="/dashboard"><h2>CRM</h2></Link>
+            <Link to="/dashboard"><h1>CRM</h1></Link>
             <nav>
                 <NavLink
                     to="/dashboard"
