@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const { createClient, getClients, getClientById, getClientCount, updateClient, deleteClient } = require('../controllers/client');
-const { get } = require('mongoose');
 
 router.post('/', createClient);
 router.get('/', getClients);

@@ -1,26 +1,12 @@
-// import { NavLink, Link } from 'react-router-dom';
-// import './sideBar.css';
-
-// const SideBar = () => {
-//     return (
-//         <div className="sidebar">
-//             <Link to="/dashboard"><h2>CRM</h2></Link>
-//             <nav>
-//                 <NavLink to="/dashboard" activeClassName="active">Dashboard</NavLink>
-//                 <NavLink to="/clients" activeClassName="active">Clients</NavLink>
-//                 <NavLink to="/meetings" activeClassName="active">Meetings</NavLink>
-//                 <NavLink to="/notes" activeClassName="active">Notes</NavLink>
-//             </nav>
-//         </div>
-//     )
-// }
-
-// export default SideBar;
-
 import { NavLink, Link } from 'react-router-dom';
 import './sideBar.css';
 
 const SideBar = () => {
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('userName');
+        localStorage.removeItem('userId');
+    }
     return (
         <div className="sidebar">
             <Link to="/dashboard"><h1>CRM</h1></Link>
@@ -48,6 +34,12 @@ const SideBar = () => {
                     className={({ isActive }) => (isActive ? 'active' : '')}
                 >
                     Notes
+                </NavLink>
+                <NavLink
+                    to="/login"
+                    onClick={handleLogout}
+                >
+                    Logout
                 </NavLink>
             </nav>
         </div>

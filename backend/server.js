@@ -8,6 +8,7 @@ const clientRoutes = require('./routes/client');
 const meetingRoutes = require('./routes/meeting');
 const noteRoutes = require('./routes/note');
 const taskRoutes = require('./routes/task');
+const userRoutes = require('./routes/user')
 
 dotenv.config();
 connectDb();
@@ -22,6 +23,7 @@ app.use('/api/clients', clientRoutes);
 app.use('/api/meetings', meetingRoutes);
 app.use('/api/notes', noteRoutes);
 app.use('/api/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
