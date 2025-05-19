@@ -14,8 +14,8 @@ dotenv.config();
 connectDb();
 
 const allowedOrigins = [
-    'http://localhost:5173',
-    'https://crm-pink-mu.vercel.app'
+    'https://crm-pink-mu.vercel.app',
+    'http://localhost:5173'
 ];
 
 app.use(cors({
@@ -30,6 +30,7 @@ app.use(cors({
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
+
 
 app.use(express.json());
 
