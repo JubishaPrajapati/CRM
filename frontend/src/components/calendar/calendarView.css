@@ -6,6 +6,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
 }
 
 /* Override FullCalendar base styles if needed */
@@ -61,7 +62,6 @@
     cursor: pointer;
 }
 
-
 .fc-event:hover {
     background-color: #333;
 }
@@ -79,6 +79,58 @@
 
 @media (max-width: 768px) {
     .calendar-container {
-        padding: 0.5rem;
+        padding: 10px;
+        margin: 10px;
+        max-width: 100%;
+        overflow-x: auto;
+        /* Allows horizontal scroll if needed */
+    }
+
+    .fc-toolbar-title {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .fc-button {
+        font-size: 12px;
+        padding: 4px 6px;
+    }
+
+    .fc-daygrid-day-number {
+        font-size: 12px;
+    }
+
+    .fc-event {
+        font-size: 11px;
+        padding: 1px 3px;
+    }
+
+    .fc .fc-toolbar.fc-header-toolbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fc .fc-toolbar-chunk {
+        margin-bottom: 5px;
+    }
+
+    /* Calendar grid spacing */
+    .fc-daygrid-day-frame {
+        padding: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .fc-event {
+        font-size: 10px;
+    }
+
+    .fc-toolbar-title {
+        font-size: 14px;
+    }
+
+    .fc-button {
+        font-size: 10px;
+        padding: 2px 5px;
     }
 }

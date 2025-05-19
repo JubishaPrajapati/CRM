@@ -35,7 +35,7 @@ const DashboardHome = () => {
                 <SummaryCard title="Upcoming Meetings" count={meetingCount} icon={<FaCalendarAlt />} />
                 <SummaryCard title="Total Notes" count={noteCount} icon={<FaStickyNote />} />
             </div>
-            <div>
+            <div className="calendar-wrapper">
                 <CalendarView />
             </div>
         </div>
