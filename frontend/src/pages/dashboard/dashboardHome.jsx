@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import SummaryCard from "../../components/summaryCards/summaryCards";
-import CalendarView from "../../components/calender/calendarView";
+import CalendarView from "../../components/calendar/calendarView";
 import { FaUserFriends, FaCalendarAlt, FaStickyNote } from 'react-icons/fa';
 import { getClientCount, getNoteCount, getMeetingCount } from "../../services/summaryCardsService";
 import './dashboardHome.css';

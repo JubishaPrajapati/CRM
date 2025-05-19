@@ -74,3 +74,47 @@
 .note-actions {
     display: flex;
 }
+
+@media (max-width: 768px) {
+    .all-notes {
+        padding: 0px 15px;
+    }
+
+    /* .noteadd-btn {
+        font-size: 13px;
+        padding: 6px;
+        width: 100%;
+    } */
+
+    .note-list {
+        padding: 0.5rem;
+    }
+
+    .note-item {
+        padding: 10px;
+    }
+
+    .note-header {
+        font-size: 0.95rem;
+    }
+
+    .note-content p {
+        font-size: 0.9rem;
+    }
+
+    .note-footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .note-actions {
+        margin-top: 6px;
+        gap: 6px;
+    }
+
+    .notedelete-btn,
+    .noteedit-btn {
+        font-size: 14px;
+        padding: 5px 8px;
+    }
+}

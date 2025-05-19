@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getAllClients, deleteClient } from '../../services/clientService';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import { exportToExcel } from '../../utils/exportToExcel';
 import './clientList.css';
 
 const ClientList = () => {
@@ -37,9 +38,23 @@ const ClientList = () => {
         <div className='client-container'>
             <h2 className='client-header'>Clients</h2>
             <div className='btn-and-search'>
-                <button onClick={() => navigate('/clients/new')}>
-                    Add Client
-                </button>
+                <div className="btn-group">
+                    <button onClick={() => navigate('/clients/new')}>
+                        Add Client
+                    </button>
+                    <button onClick={() => {
+                        const filteredClients = clients.map(client => ({
+                            Name: client.name,
+                            Email: client.email,
+                            Phone: client.phone,
+                            Address: client.address,
+                            Status: client.status,
+                        }));
+                        exportToExcel(filteredClients, 'Client_List');
+                    }}>
+                        Export to Excel
+                    </button>
+                </div>
                 <div className="search-container">
                     <input
                         type='text'

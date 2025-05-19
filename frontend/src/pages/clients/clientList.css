@@ -69,6 +69,11 @@ th {
     cursor: pointer;
 }
 
+.btn-group {
+    display: flex;
+    gap: 1rem;
+}
+
 
 .clientview-btn {
     background-color: rgb(199, 165, 71);
@@ -134,4 +139,109 @@ th {
     left: 10px;
     transform: translateY(-50%);
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .client-container {
+        padding: 0 20px;
+    }
+
+    .btn-and-search {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+
+    .btn-group {
+        flex-direction: column;
+        /* width: 100%; */
+    }
+
+    .btn-group button {
+        width: 100%;
+    }
+
+    .search-container {
+        width: 80%;
+        margin: 0;
+    }
+
+    .client-table {
+        font-size: 12px;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .clientaction-btns {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .clientedit-btn,
+    .clientdelete-btn,
+    .clientview-btn {
+        margin: 0;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    td {
+        text-align: left;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    td::before {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-weight: bold;
+    }
+
+    td:nth-of-type(1)::before {
+        content: "Name";
+    }
+
+    td:nth-of-type(2)::before {
+        content: "Email";
+    }
+
+    td:nth-of-type(3)::before {
+        content: "Phone";
+    }
+
+    td:nth-of-type(4)::before {
+        content: "Address";
+    }
+
+    td:nth-of-type(5)::before {
+        content: "Status";
+    }
+
+    td:nth-of-type(6)::before {
+        content: "Action";
+    }
 }

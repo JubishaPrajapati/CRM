@@ -61,12 +61,12 @@ const MeetingList = () => {
                     <tbody>
                         {meetings.map(meeting => (
                             <tr key={meeting._id}>
-                                <td>{meeting.client?.name || 'N/A'}</td>
-                                <td>{formatDate(meeting.date)}</td>
-                                <td>{meeting.time}</td>
-                                <td>{meeting.location}</td>
-                                <td>{meeting.agenda}</td>
-                                <td className='meetingaction-btns'>
+                                <td data-label="Client">{meeting.client?.name || 'N/A'}</td>
+                                <td data-label="Date">{formatDate(meeting.date)}</td>
+                                <td data-label="Time">{meeting.time}</td>
+                                <td data-label="Location">{meeting.location}</td>
+                                <td data-label="Agenda">{meeting.agenda}</td>
+                                <td data-label="Actions" className='meetingaction-btns'>
                                     <button onClick={() => navigate(`/meetings/edit/${meeting._id}`)} className='meetingedit-btn'>Edit</button>
                                     <button onClick={() => handleDelete(meeting._id)} className='meetingdelete-btn'>Delete</button>
                                 </td>

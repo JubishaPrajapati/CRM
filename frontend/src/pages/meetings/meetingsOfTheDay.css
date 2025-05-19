@@ -1,56 +1,58 @@
-.meetings-container {
-    padding: 2rem;
+.meetingsOfTheDay-container {
     max-width: 800px;
     margin: 0 auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-.meetings-container h2 {
-    text-align: center;
+.meetingsOfTheDay-container h2 {
+    font-size: 1.75rem;
     margin-bottom: 1.5rem;
+    color: #333;
+    text-align: center;
+}
+
+.meetingsOfTheDay-container p {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+}
+
+.meetingsOfTheDay-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+
+.meetingsOfTheDay-item {
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.meetingsOfTheDay-item strong {
     color: #333;
 }
 
-.meeting-card {
-    background-color: #f9f9f9;
-    border-left: 5px solid #007bff;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.meeting-card strong {
-    color: #555;
-}
-
-.meeting-card button {
-    margin-top: 0.5rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
+.meetingsOfTheDay-item button {
+    margin-top: 0.8rem;
     padding: 0.5rem 1rem;
-    border-radius: 5px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.3s ease;
 }
 
-.meeting-card button:hover {
+.meetingsOfTheDay-item button:hover {
     background-color: #0056b3;
-}
-
-/* Scrollable section */
-.meeting-list {
-    max-height: 70vh;
-    overflow-y: auto;
-    padding-right: 10px;
-}
-
-.meeting-list::-webkit-scrollbar {
-    width: 8px;
-}
-
-.meeting-list::-webkit-scrollbar-thumb {
-    background-color: #ccc;
-    border-radius: 10px;
 }

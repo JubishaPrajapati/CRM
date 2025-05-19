@@ -78,6 +78,7 @@ const ClientForm = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 
@@ -88,6 +89,7 @@ const ClientForm = () => {
                         name="address"
                         value={formData.address}
                         onChange={handleChange}
+                        required
                     />
                 </div>
 

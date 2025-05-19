@@ -5,9 +5,15 @@ const clientSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    phone: String,
+    phone: {
+        type: String,
+        required: true
+    },
     email: String,
-    address: String,
+    address: {
+        type: String,
+        required: true
+    },
     status: {
         type: String,
         enum: ['new', 'contacted', 'interested', 'closed'],

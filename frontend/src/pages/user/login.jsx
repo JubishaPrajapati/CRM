@@ -25,9 +25,9 @@ const Login = () => {
             console.log("Login API response:", response);
             if (response) {
                 localStorage.setItem('token', response.token);
-                localStorage.setItem('userId', response.userId);
+                // localStorage.setItem('userId', response.userId);
                 localStorage.setItem('userName', response.userName);
-                setMessage("Login successful!");
+                // setMessage("Login successful!");
                 navigate('/dashboard');
             } else {
                 setMessage(response?.error || "Login failed.");

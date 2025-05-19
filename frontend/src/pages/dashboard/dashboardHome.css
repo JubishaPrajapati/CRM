@@ -1,9 +1,9 @@
 .dashboard-home {
-    padding: 24px;
+    padding: 20px;
 }
 
 .dashboard-home h1 {
-    margin: 30px;
+    margin: 10px;
 }
 
 .summary-cards-container {
@@ -11,4 +11,22 @@
     gap: 20px;
     flex-wrap: wrap;
     margin: 30px;
+}
+
+@media (max-width: 500px) {
+    .summary-cards-container {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px;
+        gap: 15px;
+    }
+
+    .dashboard-home h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .dashboard-home {
+        padding: 10px;
+    }
 }
