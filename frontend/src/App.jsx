@@ -11,7 +11,6 @@ import MeetingForm from './pages/meetings/meetingForm';
 import MeetingDetail from './pages/meetings/meetingDetail';
 import MeetingsOfTheDay from './pages/meetings/meetingsOfTheDay';
 import Login from './pages/user/login';
-import Register from './pages/user/register';
 import { NoteProvider } from './contexts/noteContext';
 import { ClientProvider } from './contexts/clientContext';
 import PrivateRoute from './utils/privateRoute';
@@ -26,8 +25,6 @@ function App() {
             {/* Public Routes */}
             <Route path="/" element={<Navigate to="/login" replace />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-
 
             {/* Private Route */}
             <Route element={<PrivateRoute />}>
