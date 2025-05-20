@@ -27,10 +27,14 @@ app.use(cors({
         }
     },
     credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    // methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    // allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
+// app.use(cors({
+//     origin: 'https://crm-pink-mu.vercel.app',
+//     credentials: true,
+// }))
 
 app.use(express.json());
 
