@@ -2,28 +2,6 @@ const User = require('../models/user');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-
-//register new user
-exports.register = async (req, res) => {
-    try {
-        const { name, email, password } = req.body;
-
-        // Check if user already exists
-        const existingUser = await User.findOne({ email });
-        if (existingUser) {
-            return res.status(400).json({ error: 'User already exists.' });
-        }
-
-        const newUser = new User({ name, email, password });
-        await newUser.save();
-        console.log('New user saved:', newUser);
-        res.status(201).json({ message: "User registered successfully." });
-    } catch (err) {
-        console.error("Registration error:", err);
-        res.status(500).json({ error: "Registration failed." });
-    }
-}
-
 //login user
 exports.login = async (req, res) => {
     try {

@@ -31,11 +31,6 @@ app.use(cors({
     allowedHeaders: ["Content-Type", "Authorization"]
 }));
 
-// app.use(cors({
-//     origin: 'https://crm-pink-mu.vercel.app',
-//     credentials: true,
-// }))
-
 app.use(express.json());
 
 app.use('/api/clients', clientRoutes);
