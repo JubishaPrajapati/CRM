@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../services/userService";
 import './authPages.css';
 
@@ -44,9 +44,9 @@ const Login = () => {
                 <input type="email" name="email" placeholder="Enter email address" value={formData.email} onChange={handleChange} required />
                 <input type="password" name="password" placeholder="Enter password" value={formData.password} onChange={handleChange} required />
                 <button type="submit">Login</button>
-                <div className="create-acc">
+                {/* <div className="create-acc">
                     <p> Don't have an account? <Link to="/register" className="creatacc-text">Create Account</Link></p>
-                </div>
+                </div> */}
             </form>
             {message && <p className="error-msg">{message}</p>}
         </div>
