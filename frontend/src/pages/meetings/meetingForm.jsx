@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { createMeeting, updateMeeting, getMeetingById } from '../../services/meetingService';
 import { getAllClients } from '../../services/clientService';
 import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import './meetingForm.css';
 
 const MeetingForm = () => {
+    const [clients, setClients] = useState([]);
     const [meetingDetails, setMeetingDetails] = useState({
         client: '',
         date: '',
@@ -19,8 +20,6 @@ const MeetingForm = () => {
     const queryParams = new URLSearchParams(location.search);
     const from = queryParams.get('from');
     const clientIdFromQuery = queryParams.get('clientId');
-
-    const [clients, setClients] = useState([]);
 
     useEffect(() => {
         const fetchClients = async () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SummaryCard from "../../components/summaryCards/summaryCards";
 import CalendarView from "../../components/calendar/calendarView";
 import { FaUserFriends, FaCalendarAlt, FaStickyNote } from 'react-icons/fa';

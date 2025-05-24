@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getAllClients, deleteClient } from '../../services/clientService';
 import { FaSearch } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
