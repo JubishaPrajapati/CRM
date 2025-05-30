@@ -29,7 +29,7 @@ const DashboardHome = () => {
 
     return (
         <div className="dashboard-home">
-            <h1>Welcome to crm</h1>
+            <h1>Welcome to CRM</h1>
             <div className="summary-cards-container">
                 <SummaryCard title="Total Clients" count={clientCount} icon={<FaUserFriends />} />
                 <SummaryCard title="Upcoming Meetings" count={meetingCount} icon={<FaCalendarAlt />} />
